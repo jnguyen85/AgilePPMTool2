@@ -36,4 +36,8 @@ public class ProjectService {
         if (project == null) throw new ProjectIdException("Project ID '" + projectId.toUpperCase() + "' does not exist");
         return projectRepository.findByProjectIdentifier(projectId.toUpperCase());
     }
+
+    public Iterable<Project> findAllProject() {
+        return projectRepository.findAll();
+    }
 }
